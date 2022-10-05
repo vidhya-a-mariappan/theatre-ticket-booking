@@ -1,0 +1,87 @@
+package zsm.console.PICinemas;
+
+import java.util.Scanner;
+
+public class PICinemas {
+    static int count = 1, i = 0;
+
+    public static void main(String[] args) {
+        PICinemas piCinemas = new PICinemas();
+        piCinemas.login();
+    }
+
+    private void login() {
+        Scanner scan = new Scanner(System.in);
+        System.out.println("User Name:");
+        String userName = scan.next();
+        System.out.println("Password:");
+        String password = scan.next();
+        if (checkLogin(userName, password))
+            mainDisplay();
+        else {
+            count++;
+            if (count <= 3) {
+                System.out.println("InCorrect Username and password, " + (count - i) + " attempts remaining");
+                i += 2;
+                login();
+            }
+            else
+                System.out.println("Your account has been locked,Login after sometimes");
+        }
+    }
+
+    private boolean checkLogin(String user, String pswd) {
+        boolean login = false;
+        if (user.equals("admin") && pswd.equals("zsm"))
+            return true;
+        return login;
+    }
+
+    private void mainDisplay() {
+
+        int option = 0, screenNo = 0, show = 0;
+        TheatreTicketProcess theatreTicketProcess = new TheatreTicketProcess();
+        Scanner scan = new Scanner(System.in);
+        System.out.println("------------------------------------------------Welcome to PICinemas----------------------------------------------------");
+        System.out.println("------------------------------------------------------------------------------------------------------------------------");
+        System.out.printf("%-43s %-20s %-40s\n", "SCREEN 1", "|", "SCREEN 2");
+        System.out.printf("%-43s %-20s %-40s\n", "PONNIYIN SELVAN PART I", "|", "NAANE VARUVEAN");
+        System.out.printf("%-43s %-20s %-40s\n", "(U/A) TAMIL 2h 27m 2D", "|", "(U/A) TAMIL 2h 15m 2D");
+        System.out.printf("%-10s %-10s %-10s %-10s %-20s %-10s %-10s %-10s %-10s\n", "Show1:10am", "Show2:2pm", "Show3:6pm", "Show4:10pm", "|", "Show1:9am", "Show2:1pm", "Show3:5pm", "Show4:9pm");
+        System.out.println("-------------------------------------------------------------------------------------------------------------------------");
+        do {
+            System.out.println("Select Screen Number");
+            screenNo = scan.nextInt();
+            switch (screenNo) {
+                case 1:
+                case 2:
+                    do {
+                        System.out.println("Select Show Number");
+                        show = scan.nextInt();
+                        System.out.println("1.Check Availability\n2.Book Ticket\n3.Cancel Ticket\n4.Print Ticket History\n5.Collection Details\n6.Back to Screen Selection");
+                        System.out.println("Select your option");
+                        option = scan.nextInt();
+                        switch (option) {
+                            case 1 -> theatreTicketProcess.checkAvailability(screenNo, show);
+                            case 2 -> theatreTicketProcess.bookTicket(screenNo, show);
+
+                            case 3 -> {
+                                System.out.println("Enter the mobile to cancel ticket");
+                                String mobile = scan.next();
+                                theatreTicketProcess.cancel(screenNo, show, mobile);
+                            }
+                            case 4 -> theatreTicketProcess.print();
+                            case 5 -> theatreTicketProcess.collectionDetails();
+                            case 6 -> System.out.println("Back");
+                        }
+                    } while (option != 6);
+                    break;
+                case 3:
+                    System.out.println("Please select the valid screen");
+                    break;
+            }
+        } while (screenNo != 3);
+    }
+}
+
+
