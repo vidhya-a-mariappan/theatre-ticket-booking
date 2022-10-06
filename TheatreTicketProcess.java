@@ -28,68 +28,68 @@ public class TheatreTicketProcess {
     ArrayList<CustomerInfo> customers = new ArrayList<>();
 
     public void checkAvailability(int screenNo, int show) {
-        int i = 0, j = 0;
+        int outerIndex = 0, innerIndex = 0;
         if (screenNo == 1) {
             if (show == 1) {
-                for (i = 1; i <= 10; i++) {
-                    for (j = 1; j <= 10; j++)
-                        screen1show1.add(new TicketInfo(1, 1, (char) (64 + i) + "" + j, true));
+                for (outerIndex = 1; outerIndex <= 10; outerIndex++) {
+                    for (innerIndex = 1; innerIndex <= 10; innerIndex++)
+                        screen1show1.add(new TicketInfo(1, 1, (char) (64 + outerIndex) + "" + innerIndex, true));
                 }
                 System.out.println("-------------------------------SCREEN HERE---------------------------------------------");
                 System.out.print(screen1show1Available + " seats available in screen 1 show 1");
-                for (i = 0; i < 100; i++) {
-                    if (i % 10 == 0)
+                for (outerIndex = 0; outerIndex < 100; outerIndex++) {
+                    if (outerIndex % 10 == 0)
                         System.out.println();
-                    if (screen1show1.get(i).isAvailable())
-                        System.out.print(screen1show1.get(i).getSeatNumber() + "  ");
+                    if (screen1show1.get(outerIndex).isAvailable())
+                        System.out.print(screen1show1.get(outerIndex).getSeatNumber() + "  ");
                     else
                         System.out.print("-®- ");
                 }
             }
             if (show == 2) {
-                for (i = 1; i <= 10; i++) {
-                    for (j = 1; j <= 10; j++)
-                        screen1show2.add(new TicketInfo(1, 2, (char) (64 + i) + "" + j, true));
+                for (outerIndex = 1; outerIndex <= 10; outerIndex++) {
+                    for (innerIndex = 1; innerIndex <= 10; innerIndex++)
+                        screen1show2.add(new TicketInfo(1, 2, (char) (64 + outerIndex) + "" + innerIndex, true));
                 }
                 System.out.println("-------------------------------SCREEN HERE---------------------------------------------");
                 System.out.print(screen1show2Available + " seats available in screen 1 show 2");
-                for (i = 0; i < 100; i++) {
-                    if (i % 10 == 0)
+                for (outerIndex = 0; outerIndex < 100; outerIndex++) {
+                    if (outerIndex % 10 == 0)
                         System.out.println();
-                    if (screen1show2.get(i).isAvailable())
-                        System.out.print(screen1show2.get(i).getSeatNumber() + "  ");
+                    if (screen1show2.get(outerIndex).isAvailable())
+                        System.out.print(screen1show2.get(outerIndex).getSeatNumber() + "  ");
                     else
                         System.out.print("-®- ");
                 }
             }
             if (show == 3) {
-                for (i = 1; i <= 10; i++) {
-                    for (j = 1; j <= 10; j++)
-                        screen1show3.add(new TicketInfo(1, 3, (char) (64 + i) + "" + j, true));
+                for (outerIndex = 1; outerIndex <= 10; outerIndex++) {
+                    for (innerIndex = 1; innerIndex <= 10; innerIndex++)
+                        screen1show3.add(new TicketInfo(1, 3, (char) (64 + outerIndex) + "" + innerIndex, true));
                 }
                 System.out.println("-------------------------------SCREEN HERE---------------------------------------------");
                 System.out.print(screen1show3Available + " seats available in screen 1 show 3");
-                for (i = 0; i < 100; i++) {
-                    if (i % 10 == 0)
+                for (outerIndex = 0; outerIndex < 100; outerIndex++) {
+                    if (outerIndex % 10 == 0)
                         System.out.println();
-                    if (screen1show3.get(i).isAvailable())
-                        System.out.print(screen1show3.get(i).getSeatNumber() + "  ");
+                    if (screen1show3.get(outerIndex).isAvailable())
+                        System.out.print(screen1show3.get(outerIndex).getSeatNumber() + "  ");
                     else
                         System.out.print("-®- ");
                 }
             }
             if (show == 4) {
-                for (i = 1; i <= 10; i++) {
-                    for (j = 1; j <= 10; j++)
-                        screen1show4.add(new TicketInfo(1, 4, (char) (64 + i) + "" + j, true));
+                for (outerIndex = 1; outerIndex <= 10; outerIndex++) {
+                    for (innerIndex = 1; innerIndex <= 10; innerIndex++)
+                        screen1show4.add(new TicketInfo(1, 4, (char) (64 + outerIndex) + "" + innerIndex, true));
                 }
                 System.out.println("-------------------------------SCREEN HERE---------------------------------------------");
                 System.out.print(screen2show4Available + " seats available in screen 1 show 4");
-                for (i = 0; i < 100; i++) {
-                    if (i % 10 == 0)
+                for (outerIndex = 0; outerIndex < 100; outerIndex++) {
+                    if (outerIndex % 10 == 0)
                         System.out.println();
-                    if (screen1show4.get(i).isAvailable())
-                        System.out.print(screen1show4.get(i).getSeatNumber() + "  ");
+                    if (screen1show4.get(outerIndex).isAvailable())
+                        System.out.print(screen1show4.get(outerIndex).getSeatNumber() + "  ");
                     else
                         System.out.print("-®- ");
                 }
@@ -98,65 +98,65 @@ public class TheatreTicketProcess {
         }
         if (screenNo == 2) {
             if (show == 1) {
-                for (i = 1; i <= 10; i++) {
-                    for (j = 1; j <= 10; j++)
-                        screen2show1.add(new TicketInfo(2, 1, (char) (64 + i) + "" + j, true));
+                for (outerIndex = 1; outerIndex <= 10; outerIndex++) {
+                    for (innerIndex = 1; innerIndex <= 10; innerIndex++)
+                        screen2show1.add(new TicketInfo(2, 1, (char) (64 + outerIndex) + "" + innerIndex, true));
                 }
                 System.out.println("-------------------------------SCREEN HERE---------------------------------------------");
                 System.out.print(screen2show1Available + " seats available in screen 2 show 1");
-                for (i = 0; i < 100; i++) {
-                    if (i % 10 == 0)
+                for (outerIndex = 0; outerIndex < 100; outerIndex++) {
+                    if (outerIndex % 10 == 0)
                         System.out.println();
-                    if (screen2show1.get(i).isAvailable())
-                        System.out.print(screen2show1.get(i).getSeatNumber() + "  ");
+                    if (screen2show1.get(outerIndex).isAvailable())
+                        System.out.print(screen2show1.get(outerIndex).getSeatNumber() + "  ");
                     else
                         System.out.print("-®- ");
                 }
             }
             if (show == 2) {
-                for (i = 1; i <= 10; i++) {
-                    for (j = 1; j <= 10; j++)
-                        screen2show2.add(new TicketInfo(2, 2, (char) (64 + i) + "" + j, true));
+                for (outerIndex = 1; outerIndex <= 10; outerIndex++) {
+                    for (innerIndex = 1; innerIndex <= 10; innerIndex++)
+                        screen2show2.add(new TicketInfo(2, 2, (char) (64 + outerIndex) + "" + innerIndex, true));
                 }
                 System.out.println("-------------------------------SCREEN HERE---------------------------------------------");
                 System.out.print(screen2show2Available + " seats available in screen 2 show 2");
-                for (i = 0; i < 100; i++) {
-                    if (i % 10 == 0)
+                for (outerIndex = 0; outerIndex < 100; outerIndex++) {
+                    if (outerIndex % 10 == 0)
                         System.out.println();
-                    if (screen2show2.get(i).isAvailable())
-                        System.out.print(screen2show2.get(i).getSeatNumber() + "  ");
+                    if (screen2show2.get(outerIndex).isAvailable())
+                        System.out.print(screen2show2.get(outerIndex).getSeatNumber() + "  ");
                     else
                         System.out.print("-®- ");
                 }
             }
             if (show == 3) {
-                for (i = 1; i <= 10; i++) {
-                    for (j = 1; j <= 10; j++)
-                        screen2show3.add(new TicketInfo(2, 3, (char) (64 + i) + "" + j, true));
+                for (outerIndex = 1; outerIndex <= 10; outerIndex++) {
+                    for (innerIndex = 1; innerIndex <= 10; innerIndex++)
+                        screen2show3.add(new TicketInfo(2, 3, (char) (64 + outerIndex) + "" + innerIndex, true));
                 }
                 System.out.println("-------------------------------SCREEN HERE---------------------------------------------");
                 System.out.print(screen2show3Available + " seats available in screen 2 show 3");
-                for (i = 0; i < 100; i++) {
-                    if (i % 10 == 0)
+                for (outerIndex = 0; outerIndex < 100; outerIndex++) {
+                    if (outerIndex % 10 == 0)
                         System.out.println();
-                    if (screen2show3.get(i).isAvailable())
-                        System.out.print(screen2show3.get(i).getSeatNumber() + "  ");
+                    if (screen2show3.get(outerIndex).isAvailable())
+                        System.out.print(screen2show3.get(outerIndex).getSeatNumber() + "  ");
                     else
                         System.out.print("-®- ");
                 }
             }
             if (show == 4) {
-                for (i = 1; i <= 10; i++) {
-                    for (j = 1; j <= 10; j++)
-                        screen2show4.add(new TicketInfo(2, 4, (char) (64 + i) + "" + j, true));
+                for (outerIndex = 1; outerIndex <= 10; outerIndex++) {
+                    for (innerIndex = 1; innerIndex <= 10; innerIndex++)
+                        screen2show4.add(new TicketInfo(2, 4, (char) (64 + outerIndex) + "" + innerIndex, true));
                 }
                 System.out.println("-------------------------------SCREEN HERE---------------------------------------------");
                 System.out.print(screen2show4Available + " seats available in screen 2 show 4");
-                for (i = 0; i < 100; i++) {
-                    if (i % 10 == 0)
+                for (outerIndex = 0; outerIndex < 100; outerIndex++) {
+                    if (outerIndex % 10 == 0)
                         System.out.println();
-                    if (screen2show4.get(i).isAvailable())
-                        System.out.print(screen2show4.get(i).getSeatNumber() + "  ");
+                    if (screen2show4.get(outerIndex).isAvailable())
+                        System.out.print(screen2show4.get(outerIndex).getSeatNumber() + "  ");
                     else
                         System.out.print("-®- ");
                 }
@@ -285,66 +285,67 @@ public class TheatreTicketProcess {
         double totalAmount = amount + (amount * 0.28);
         if (screenNo == 1) {
             if (show == 1) {
-                for (int i = 1; i <= totalNoOfTickets; i++) {
-                    System.out.println("Select " + i + "st" + " seat number");
+                for (int ticketIterator = 1; ticketIterator <= totalNoOfTickets; ticketIterator++) {
+                    System.out.println("Select " + ticketIterator + "st" + " seat number");
                     String seatNo = input.next();
                     while (seatAvailabilityCheck(1, 1, seatNo)) {
                         System.out.println("Ooch!Ticket already booked!Select any other seat number");
                         seatNo = input.next();
                     }
                     totalSeatNo = totalSeatNo.equals("") ? seatNo : totalSeatNo + "," + seatNo;
-                    for (int j = 0; j < 100; j++) {
-                        if (screen1show1.get(j).getSeatNumber().equals(seatNo))
-                            screen1show1.get(j).setAvailable(false);
+                    for (int index = 0; index < 100; index++) {
+                        if (screen1show1.get(index).getSeatNumber().equals(seatNo))
+                            screen1show1.get(index).setAvailable(false);
                     }
+                    
                 }
                 screen1show1Available = screen1show1Available - totalNoOfTickets;
             }
             if (show == 2) {
-                for (int i = 1; i <= totalNoOfTickets; i++) {
-                    System.out.println("Select " + i + "st" + " seat number");
+                for (int ticketIterator = 1; ticketIterator <= totalNoOfTickets; ticketIterator++) {
+                    System.out.println("Select " + ticketIterator + "st" + " seat number");
                     String seatNo = input.next();
                     while (seatAvailabilityCheck(1, 2, seatNo)) {
                         System.out.println("Ooch!Ticket already booked!Select any other seat number");
                         seatNo = input.next();
                     }
                     totalSeatNo = totalSeatNo.equals("") ? seatNo : totalSeatNo + "," + seatNo;
-                    for (int j = 0; j < 100; j++) {
-                        if (screen1show2.get(j).getSeatNumber().equals(seatNo))
-                            screen1show2.get(j).setAvailable(false);
+                    for (int index = 0; index < 100; index++) {
+                        if (screen1show2.get(index).getSeatNumber().equals(seatNo))
+                            screen1show2.get(index).setAvailable(false);
                     }
                 }
                 screen1show2Available = screen1show2Available - totalNoOfTickets;
             }
             if (show == 3) {
-                for (int i = 1; i <= totalNoOfTickets; i++) {
-                    System.out.println("Select " + i + "st" + " seat number");
+                for (int ticketIterator = 1; ticketIterator <= totalNoOfTickets; ticketIterator++) {
+                    System.out.println("Select " + ticketIterator + "st" + " seat number");
                     String seatNo = input.next();
                     while (seatAvailabilityCheck(1, 3, seatNo)) {
                         System.out.println("Ooch!Ticket already booked!Select any other seat number");
                         seatNo = input.next();
                     }
                     totalSeatNo = totalSeatNo.equals("") ? seatNo : totalSeatNo + "," + seatNo;
-                    for (int j = 0; j < 100; j++) {
-                        if (screen1show3.get(j).getSeatNumber().equals(seatNo))
-                            screen1show3.get(j).setAvailable(false);
+                    for (int index = 0; index < 100; index++) {
+                        if (screen1show3.get(index).getSeatNumber().equals(seatNo))
+                            screen1show3.get(index).setAvailable(false);
                     }
                 }
                 screen1show3Available = screen1show3Available - totalNoOfTickets;
             }
             if (show == 4) {
 
-                for (int i = 1; i <= totalNoOfTickets; i++) {
-                    System.out.println("Select " + i + "st" + " seat number");
+                for (int ticketIterator = 1; ticketIterator <= totalNoOfTickets; ticketIterator++) {
+                    System.out.println("Select " + ticketIterator + "st" + " seat number");
                     String seatNo = input.next();
                     while (seatAvailabilityCheck(1, 4, seatNo)) {
                         System.out.println("Ooch!Ticket already booked!Select any other seat number");
                         seatNo = input.next();
                     }
                     totalSeatNo = totalSeatNo.equals("") ? seatNo : totalSeatNo + "," + seatNo;
-                    for (int j = 0; j < 100; j++) {
-                        if (screen1show4.get(j).getSeatNumber().equals(seatNo))
-                            screen1show4.get(j).setAvailable(false);
+                    for (int index = 0; index < 100; index++) {
+                        if (screen1show4.get(index).getSeatNumber().equals(seatNo))
+                            screen1show4.get(index).setAvailable(false);
                     }
                 }
                 screen1show4Available = screen1show4Available - totalNoOfTickets;
@@ -352,65 +353,65 @@ public class TheatreTicketProcess {
         }
         if (screenNo == 2) {
             if (show == 1) {
-                for (int i = 1; i <= totalNoOfTickets; i++) {
-                    System.out.println("Select " + i + "st" + " seat number");
+                for (int ticketIterator = 1; ticketIterator <= totalNoOfTickets; ticketIterator++) {
+                    System.out.println("Select " + ticketIterator + "st" + " seat number");
                     String seatNo = input.next();
                     while (seatAvailabilityCheck(2, 1, seatNo)) {
                         System.out.println("Ooch!Ticket already booked!Select any other seat number");
                         seatNo = input.next();
                     }
                     totalSeatNo = totalSeatNo.equals("") ? seatNo : totalSeatNo + "," + seatNo;
-                    for (int j = 0; j < 100; j++) {
-                        if (screen2show1.get(j).getSeatNumber().equals(seatNo))
-                            screen2show1.get(j).setAvailable(false);
+                    for (int index = 0; index < 100; index++) {
+                        if (screen2show1.get(index).getSeatNumber().equals(seatNo))
+                            screen2show1.get(index).setAvailable(false);
                     }
                 }
                 screen2show1Available = screen2show1Available - totalNoOfTickets;
             }
             if (show == 2) {
-                for (int i = 1; i <= totalNoOfTickets; i++) {
-                    System.out.println("Select " + i + "st" + " seat number");
+                for (int ticketIterator = 1; ticketIterator <= totalNoOfTickets; ticketIterator++) {
+                    System.out.println("Select " + ticketIterator + "st" + " seat number");
                     String seatNo = input.next();
                     while (seatAvailabilityCheck(2, 2, seatNo)) {
                         System.out.println("Ooch!Ticket already booked!Select any other seat number");
                         seatNo = input.nextLine();
                     }
                     totalSeatNo = totalSeatNo.equals("") ? seatNo : totalSeatNo + "," + seatNo;
-                    for (int j = 0; j < 100; j++) {
-                        if (screen2show2.get(j).getSeatNumber().equals(seatNo))
-                            screen2show2.get(j).setAvailable(false);
+                    for (int index = 0; index < 100; index++) {
+                        if (screen2show2.get(index).getSeatNumber().equals(seatNo))
+                            screen2show2.get(index).setAvailable(false);
                     }
                 }
                 screen2show2Available = screen2show2Available - totalNoOfTickets;
             }
             if (show == 3) {
-                for (int i = 1; i <= totalNoOfTickets; i++) {
-                    System.out.println("Select " + i + "st" + " seat number");
+                for (int ticketIterator = 1; ticketIterator <= totalNoOfTickets; ticketIterator++) {
+                    System.out.println("Select " + ticketIterator + "st" + " seat number");
                     String seatNo = input.next();
                     while (seatAvailabilityCheck(2, 3, seatNo)) {
                         System.out.println("Ooch!Ticket already booked!Select any other seat number");
                         seatNo = input.next();
                     }
                     totalSeatNo = totalSeatNo.equals("") ? seatNo : totalSeatNo + "," + seatNo;
-                    for (int j = 0; j < 100; j++) {
-                        if (screen2show3.get(j).getSeatNumber().equals(seatNo))
-                            screen2show3.get(j).setAvailable(false);
+                    for (int index = 0; index < 100; index++) {
+                        if (screen2show3.get(index).getSeatNumber().equals(seatNo))
+                            screen2show3.get(index).setAvailable(false);
                     }
                 }
                 screen2show3Available = screen2show3Available - totalNoOfTickets;
             }
             if (show == 4) {
-                for (int i = 1; i <= totalNoOfTickets; i++) {
-                    System.out.println("Select " + i + "st" + " seat number");
+                for (int ticketIterator = 1; ticketIterator <= totalNoOfTickets; ticketIterator++) {
+                    System.out.println("Select " + ticketIterator + "st" + " seat number");
                     String seatNo = input.next();
                     while (!seatAvailabilityCheck(2, 4, seatNo)) {
                         System.out.println("Ooch!Ticket already booked!Select any other seat number");
                         seatNo = input.next();
                     }
                     totalSeatNo = totalSeatNo.equals("") ? seatNo : totalSeatNo + "," + seatNo;
-                    for (int j = 0; j < 100; j++) {
-                        if (screen2show4.get(j).getSeatNumber().equals(seatNo))
-                            screen2show4.get(j).setAvailable(false);
+                    for (int index = 0; index < 100; index++) {
+                        if (screen2show4.get(index).getSeatNumber().equals(seatNo))
+                            screen2show4.get(index).setAvailable(false);
                     }
                 }
                 screen2show4Available = screen2show4Available - totalNoOfTickets;
@@ -467,44 +468,44 @@ public class TheatreTicketProcess {
     }
 
     public void printTicketHistory(ArrayList<CustomerInfo> customerInfo) {
-        for (int i = 0; i < customerInfo.size(); i++) {
-            if (customerInfo.get(i).getScreenNumber() == 1) {
+        for (CustomerInfo info : customerInfo) {
+            if (info.getScreenNumber() == 1) {
                 System.out.println("--------------------------------------SCREEN 1-------------------------------------------------------");
                 System.out.println("PONNIYIN SELVAN PART I");
                 System.out.println("(U/A) TAMIL 2h 27m 2D");
-                if (customerInfo.get(i).getShowNumber() == 1)
+                if (info.getShowNumber() == 1)
                     System.out.printf("%-20s%-20s\n", "SHOW", "show 1 - 10 AM");
-                if (customerInfo.get(i).getShowNumber() == 2)
+                if (info.getShowNumber() == 2)
                     System.out.printf("%-20s%-20s\n", "SHOW", "show 2 - 2 PM");
-                if (customerInfo.get(i).getShowNumber() == 3)
+                if (info.getShowNumber() == 3)
                     System.out.printf("%-20s%-20s\n", "SHOW", "show 3 - 6 PM");
-                if (customerInfo.get(i).getShowNumber() == 4)
+                if (info.getShowNumber() == 4)
                     System.out.printf("%-20s%-20s\n", "SHOW", "show 4 - 10 PM");
             }
-            if (customerInfo.get(i).getScreenNumber() == 2) {
+            if (info.getScreenNumber() == 2) {
                 System.out.println("--------------------------------------SCREEN 2-------------------------------------------------------");
                 System.out.println("NAANE VARUVEAN");
                 System.out.println("(U/A) TAMIL 2h 15m 2D");
-                if (customerInfo.get(i).getShowNumber() == 1)
+                if (info.getShowNumber() == 1)
                     System.out.printf("%-20s%-20s\n", "SHOW", "show 1 - 9 AM");
-                if (customerInfo.get(i).getShowNumber() == 2)
+                if (info.getShowNumber() == 2)
                     System.out.printf("%-20s%-20s\n", "SHOW", "show 2 - 1 PM");
-                if (customerInfo.get(i).getShowNumber() == 3)
+                if (info.getShowNumber() == 3)
                     System.out.printf("%-20s%-20s\n", "SHOW", "show 3 - 5 PM");
-                if (customerInfo.get(i).getShowNumber() == 4)
+                if (info.getShowNumber() == 4)
                     System.out.printf("%-20s%-20s\n", "SHOW", "show 4 - 9 PM");
             }
-            System.out.printf("%-20s%-20s\n", "NAME:", customerInfo.get(i).getName());
-            System.out.printf("%-20s%-20s\n", "Mobile Number", customerInfo.get(i).getMobileNumber());
-            System.out.printf("%-20s%-20s\n", "NO OF SEATS", customerInfo.get(i).getTotalNoOfTickets());
-            System.out.printf("%-20s%-20s\n", "SEAT NAMES", customerInfo.get(i).getTotalSeatNumber());
+            System.out.printf("%-20s%-20s\n", "NAME:", info.getName());
+            System.out.printf("%-20s%-20s\n", "Mobile Number", info.getMobileNumber());
+            System.out.printf("%-20s%-20s\n", "NO OF SEATS", info.getTotalNoOfTickets());
+            System.out.printf("%-20s%-20s\n", "SEAT NAMES", info.getTotalSeatNumber());
             System.out.printf("%-20s%-20s\n", "Ticket Rate", "Rs.120");
             System.out.println("----------------------------------------------------------------------------------------------------");
-            System.out.printf("%-20s%-20s\n", "Amount", "Rs." + customerInfo.get(i).getAmount());
-            System.out.printf("%-20s%-20s\n", "CGST", "Rs." + customerInfo.get(i).getAmount() * 0.14);
-            System.out.printf("%-20s%-20s\n", "SGST", "Rs." + customerInfo.get(i).getAmount() * 0.14);
+            System.out.printf("%-20s%-20s\n", "Amount", "Rs." + info.getAmount());
+            System.out.printf("%-20s%-20s\n", "CGST", "Rs." + info.getAmount() * 0.14);
+            System.out.printf("%-20s%-20s\n", "SGST", "Rs." + info.getAmount() * 0.14);
             System.out.println("-----------------------------------------------------------------------------------------------------");
-            System.out.printf("%-40s\n", "Total Amount to Pay Rs." + df.format(customerInfo.get(i).getTotalAmount()));
+            System.out.printf("%-40s\n", "Total Amount to Pay Rs." + df.format(info.getTotalAmount()));
             System.out.println("-----------------------------------------------------------------------------------------------------");
         }
     }
@@ -513,29 +514,29 @@ public class TheatreTicketProcess {
         boolean seatAlreadyBooked = false;
         if (screenNo == 1) {
             if (show == 1) {
-                for (int i = 0; i < 100; i++) {
-                    if (screen1show1.get(i).getSeatNumber().equals(seatNo) && screen1show1.get(i).isAvailable()) {
+                for (int index = 0; index < 100; index++) {
+                    if (screen1show1.get(index).getSeatNumber().equals(seatNo) && screen1show1.get(index).isAvailable()) {
                         seatAlreadyBooked = true;
                     }
                 }
             }
             if (show == 2) {
-                for (int i = 0; i < 100; i++) {
-                    if (screen1show2.get(i).getSeatNumber().equals(seatNo) && screen1show2.get(i).isAvailable()) {
+                for (int index = 0; index < 100; index++) {
+                    if (screen1show2.get(index).getSeatNumber().equals(seatNo) && screen1show2.get(index).isAvailable()) {
                         seatAlreadyBooked = true;
                     }
                 }
             }
             if (show == 3) {
-                for (int i = 0; i < 100; i++) {
-                    if (screen1show3.get(i).getSeatNumber().equals(seatNo) && screen1show3.get(i).isAvailable()) {
+                for (int index = 0; index < 100; index++) {
+                    if (screen1show3.get(index).getSeatNumber().equals(seatNo) && screen1show3.get(index).isAvailable()) {
                         seatAlreadyBooked = true;
                     }
                 }
             }
             if (show == 4) {
-                for (int i = 0; i < 100; i++) {
-                    if (screen1show4.get(i).getSeatNumber().equals(seatNo) && screen1show4.get(i).isAvailable()) {
+                for (int index = 0; index < 100; index++) {
+                    if (screen1show4.get(index).getSeatNumber().equals(seatNo) && screen1show4.get(index).isAvailable()) {
                         seatAlreadyBooked = true;
                     }
                 }
@@ -543,29 +544,29 @@ public class TheatreTicketProcess {
         }
         if (screenNo == 2) {
             if (show == 1) {
-                for (int i = 0; i < 100; i++) {
-                    if (screen2show1.get(i).getSeatNumber().equals(seatNo) && screen2show1.get(i).isAvailable()) {
+                for (int index = 0; index < 100; index++) {
+                    if (screen2show1.get(index).getSeatNumber().equals(seatNo) && screen2show1.get(index).isAvailable()) {
                         seatAlreadyBooked = true;
                     }
                 }
             }
             if (show == 2) {
-                for (int i = 0; i < 100; i++) {
-                    if (screen2show2.get(i).getSeatNumber().equals(seatNo) && screen2show2.get(i).isAvailable()) {
+                for (int index = 0; index < 100; index++) {
+                    if (screen2show2.get(index).getSeatNumber().equals(seatNo) && screen2show2.get(index).isAvailable()) {
                         seatAlreadyBooked = true;
                     }
                 }
             }
             if (show == 3) {
-                for (int i = 0; i < 100; i++) {
-                    if (screen2show3.get(i).getSeatNumber().equals(seatNo) && screen2show3.get(i).isAvailable()) {
+                for (int index = 0; index < 100; index++) {
+                    if (screen2show3.get(index).getSeatNumber().equals(seatNo) && screen2show3.get(index).isAvailable()) {
                         seatAlreadyBooked = true;
                     }
                 }
             }
             if (show == 4) {
-                for (int i = 0; i < 100; i++) {
-                    if (screen2show4.get(i).getSeatNumber().equals(seatNo) && screen2show4.get(i).isAvailable()) {
+                for (int index = 0; index < 100; index++) {
+                    if (screen2show4.get(index).getSeatNumber().equals(seatNo) && screen2show4.get(index).isAvailable()) {
                         seatAlreadyBooked = true;
                     }
                 }
@@ -582,9 +583,9 @@ public class TheatreTicketProcess {
     private void totalCollectionDetails(ArrayList<CustomerInfo> customers) {
         int sumOfAmount = 0;
         double sumOfTotalAmount = 0.0;
-        for (int i = 0; i < customers.size(); i++) {
-            sumOfAmount += customers.get(i).getAmount();
-            sumOfTotalAmount += customers.get(i).getTotalAmount();
+        for (CustomerInfo customer : customers) {
+            sumOfAmount += customer.getAmount();
+            sumOfTotalAmount += customer.getTotalAmount();
         }
         System.out.println("------------------------------------------------------------------------------------------------------------------------");
         System.out.printf("%-50s%-20s\n", "Total Collection Amount:", sumOfAmount);
