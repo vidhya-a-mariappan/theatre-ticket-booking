@@ -7,13 +7,6 @@ public class TicketInfo {
     private String seatNumber;
     private boolean available;
 
-    TicketInfo(int screenNo, int showNo, String seatNo, boolean available) {
-        this.screenNumber = screenNo;
-        this.showNumber = showNo;
-        this.seatNumber = seatNo;
-        this.available = available;
-    }
-
     public int getScreenNumber() {
         return screenNumber;
     }
@@ -45,5 +38,11 @@ public class TicketInfo {
     public void setAvailable(boolean available) {
         this.available = available;
     }
-
+    
+    TicketInfo(int screenNo, int showNo, String seatNo, boolean available) {
+        this.screenNumber = screenNo;
+        this.showNumber = showNo;
+        this.seatNumber = seatNo;
+        this.available = available;
+    }
 }
